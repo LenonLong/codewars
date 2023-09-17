@@ -23,7 +23,7 @@ function points(games) {
 
    for (let i = 0; i < games.length; i++) {
     const [x, y] = games[i].split(':');
-    console.log([x, y])
+    
 
     if (x > y) {
         totalPoints += 3;
