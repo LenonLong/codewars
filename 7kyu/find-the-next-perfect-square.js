@@ -11,6 +11,8 @@ Examples:(Input --> Output)
 121 --> 144
 625 --> 676
 114 --> -1 since 114 is not a perfect square
+
+**  The next perfect square can be found by adding 1 to square root and squaring the sum
 */
 function findNextSquare(sq) {
     if (Number.isInteger(Math.sqrt(sq))) return (Math.sqrt(sq) + 1) ** 2;
@@ -18,6 +20,13 @@ function findNextSquare(sq) {
     return -1;
   }
 
-  console.log(findNextSquare(121))
-  console.log(findNextSquare(625))
-  console.log(findNextSquare(114))
+  console.log(findNextSquare(121))  // => 144
+  console.log(findNextSquare(625)) //  => 676
+  console.log(findNextSquare(114)) //  => -1
+
+  /*
+1. The function Number.isInteger() is used to check if the square root of the input sq is an integer. This condition determines whether sq is a perfect square or not.
+2. If the square root of sq is an integer (i.e., Number.isInteger(Math.sqrt(sq)) is true), it means that sq is a perfect square.
+3. Inside the if block, (Math.sqrt(sq) + 1) ** 2 calculates the square of the next integer after the square root of sq. This value represents the next perfect square after sq.
+4. If sq is not a perfect square (i.e., the square root of sq is not an integer), the function returns -1, indicating that there is no next perfect square.
+  */
