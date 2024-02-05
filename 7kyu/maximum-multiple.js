@@ -45,5 +45,5 @@ console.log(maxMultiple(37,200),185);
 console.log(maxMultiple(7,100),98);
 
 /*
-const maxMultiple = (divisor, bound) => bound - bound % divisor ;
+const maxMultiple = (divisor, bound) => bound - (bound % divisor) ;
 */
