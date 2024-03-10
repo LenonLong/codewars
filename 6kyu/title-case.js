@@ -35,3 +35,16 @@ function titleCase(title, minorWords) {
 console.log(titleCase('a clash of KINGS', 'a an the of'))   // =>  'A Clash of Kings'
 console.log(titleCase('THE WIND IN THE WILLOWS', 'The In')) // =>  'The Wind in the Willows'
 console.log(titleCase('the quick brown fox'))               // =>  'The Quick Brown Fox'
+
+/*
+1. function called titleCase that takes two parameters: title (the string to be title-cased) and minorWords (optional, a string containing minor words that should not be capitalized unless they are the first word).
+2. const words converts the title string to lowercase using the toLowerCase() method and then splits it into an array of words using the split(' ') method. Each word is separated by a space.
+3. the minorWords string is converted to lowercase using toLowerCase() and split into an array of words. If minorWords is not provided (it's undefined), an empty array is assigned to minorWordsArray.
+4. The loop iterates over each word in the words array.
+        - For each word:
+        - If it's the first word (i === 0), or if it's not included in the minorWordsArray, the first letter is capitalized. This is done by concatenating the capitalized first letter (words[i][0].toUpperCase()) 
+          with the rest of the word (words[i].slice(1)).
+        - If it's a minor word and not the first word, it remains unchanged.
+
+5. Finally, the modified words array is joined back into a string using the join(' ') method, with each word separated by a space.
+*/
